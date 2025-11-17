@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/contacto.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #144075;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+      visibility: visible;
+      opacity: 1;
+      flex-direction: column;
+    }
+
+    #preloader.fade-out {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Loader container to align image and loader */
+    .loader-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 480px) {
+      .loader-container {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    /* Circular loader ring */
+    .loader-ring {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 6px solid transparent;
+      border-top-color: #ffffffcc;
+      border-left-color: #ffffffcc;
+      animation: spin 1.2s linear infinite;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+    @media (max-width: 480px) {
+      .loader-ring {
+        border-width: 4px;
+      }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+
+    /* Image styling - perfectly centered in container */
+    .loader-image {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+      z-index: 10;
+      display: block;
+    }
+    </style>
+    </style>
+  </head>
+  <body>
+    <div id="preloader" role="alert" aria-live="assertive" aria-label="Cargando contenido">
+        <div class="loader-container" aria-busy="true" aria-live="polite" aria-label="Cargando">
+        <img src="img/logo_aqcua.png" alt="Imagen carga" class="loader-image" />
+        <div class="loader-ring"></div>
+        </div>
+    </div>
+    <section class="home">
+        <div class="home-box">
+            <nav>
+                <div class="logo bars">
+                    <div class="bar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                     <img src="img/logo_aqcua.png" width="120px" alt="">
+                </div>
+                <div class="menu">
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <ul>
+                        <li><a href="servicios/pag_inicio.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="#Contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/1x/aRecurso 1.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">CLÍNICA AQCUA</h3>
+          <p class="text">
+            Médicos - Sueroterapia - Quiropraxia
+          </p>
+          <p>Estamos aquí para escucharte. Completa el formulario con tus datos y cuéntanos en qué podemos ayudarte.
+             Ya sea una consulta, una propuesta o una colaboración, estaremos encantados de responderte lo antes posible.</p> <br>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/1x/aRecurso 4.png" class="icon" alt="" />
+              <p>Carrera 6 # 7 - 36, Purificacíon(Tolima)</p>
+            </div>
+            <div class="information">
+              <img src="img/1x/aRecurso 2.png" class="icon" alt="" />
+              <p>notificaciones@clinaq.com</p>
+            </div>
+            <div class="information">
+              <img src="img/1x/aRecurso 3.png" class="icon" alt="" />
+              <p>+57 305 2963163</p>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Contacto</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Nombre</label>
+              <span>Nombre</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Telefono</label>
+              <span>Telefono</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Mensaje</label>
+              <span>Mensaje</span>
+            </div>
+            <input type="submit" value="Enviar" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.classList.add('fade-out');
+        preloader.addEventListener('transitionend', () => {
+            if(preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+            document.body.style.overflow = 'auto';
+            }
+        });
+        });
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

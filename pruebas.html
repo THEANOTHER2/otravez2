@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrusel de Integrantes con Ventanas Independientes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      overflow-x: hidden;
+    }
+
+    .integrantes-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .integrantes-titulo {
+      text-align: center;
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .integrantes-carousel {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .integrantes-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 20px;
+    }
+
+    .integrante-card {
+      flex: 0 0 calc((86% - 60px) / 4);
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .integrante-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .integrante-foto {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .integrante-nombre {
+      font-size: 18px;
+      color: #007bff;
+      margin: 0 0 10px 0;
+    }
+
+    .integrante-rol {
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+    }
+
+    .integrantes-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 123, 255, 0.8);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+    }
+
+    .integrantes-btn:hover {
+      background-color: #007bff;
+    }
+
+    .integrantes-btn.prev {
+      left: 10px;
+    }
+
+    .integrantes-btn.next {
+      right: 10px;
+    }
+
+    /* Modal */
+    .integrante-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .integrante-modal-contenido {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .integrante-modal-texto {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .integrante-modal-texto h2 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .integrante-modal-texto p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .integrante-modal-imagen {
+      flex: 1;
+      border-radius: 10px;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .integrante-cerrar {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 25px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* Responsividad */
+    @media (max-width: 1024px) {
+      .integrante-card {
+        flex: 0 0 calc((100% - 40px) / 3);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .integrante-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+      }
+
+      .integrante-modal-contenido {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .integrante-modal-imagen {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .integrante-card {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="integrantes-container">
+    <h1 class="integrantes-titulo">Integrantes del Proyecto</h1>
+
+    <button class="integrantes-btn prev" onclick="moverIntegrante(-1)">‹</button>
+    <button class="integrantes-btn next" onclick="moverIntegrante(1)">›</button>
+
+    <div class="integrantes-carousel">
+      <div class="integrantes-track" id="integrantesTrack"></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="integrante-modal" id="integranteModal">
+    <div class="integrante-modal-contenido">
+      <button class="integrante-cerrar" onclick="cerrarModalIntegrante()">×</button>
+      <div class="integrante-modal-texto">
+        <h2 id="modalNombre"></h2>
+        <p id="modalDescripcion"></p>
+      </div>
+      <img id="modalFoto" class="integrante-modal-imagen" src="" alt="Foto del integrante">
+    </div>
+  </div>
+
+  <script>
+    const trackIntegrantes = document.getElementById("integrantesTrack");
+    const modalIntegrante = document.getElementById("integranteModal");
+    const modalNombre = document.getElementById("modalNombre");
+    const modalDescripcion = document.getElementById("modalDescripcion");
+    const modalFoto = document.getElementById("modalFoto");
+
+    // Información única de cada integrante
+    const integrantes = [
+      {
+        nombre: "Andrés Caballero",
+        rol: "Líder de Proyecto",
+        descripcion: "Andrés coordina el equipo y supervisa el cumplimiento de los objetivos. Tiene experiencia en gestión de proyectos y liderazgo de equipos multidisciplinarios.",
+        foto: "img/persona.jpg"
+      },
+      {
+        nombre: "María Gómez",
+        rol: "Desarrolladora Backend",
+        descripcion: "María se especializa en la lógica del servidor y las integraciones. Es experta en Node.js, Java y arquitectura de sistemas.",
+        foto: "img/persona.jpg"
+      },
+      {
+        nombre: "Carlos Ruiz",
+        rol: "Diseñador UX/UI",
+        descripcion: "Carlos diseña interfaces funcionales y atractivas, enfocadas en la experiencia del usuario y la usabilidad.",
+        foto: "img/persona.jpg"
+      },
+      {
+        nombre: "Laura Martínez",
+        rol: "Analista de Datos",
+        descripcion: "Laura se encarga del análisis de la información y la creación de reportes para la toma de decisiones estratégicas.",
+        foto: "img/persona.jpg"
+      },
+      {
+        nombre: "Pedro Hernández",
+        rol: "QA Tester",
+        descripcion: "Pedro prueba las funcionalidades del sistema y asegura que el producto final cumpla con los estándares de calidad.",
+        foto: "img/persona.jpg"
+      },
+      {
+        nombre: "Ana Torres",
+        rol: "Documentadora Técnica",
+        descripcion: "Ana redacta la documentación técnica, manuales y guías de usuario con un enfoque claro y estructurado.",
+        foto: "img/persona.jpg"
+      },
+      {
+        nombre: "Jorge Díaz",
+        rol: "Desarrollador Frontend",
+        descripcion: "Jorge implementa las interfaces visuales del sistema, garantizando un diseño adaptativo y una experiencia fluida.",
+        foto: "img/persona.jpg"
+      },
+      {
+        nombre: "Sofía Ramírez",
+        rol: "Soporte Técnico",
+        descripcion: "Sofía brinda apoyo a los usuarios finales, resolviendo incidencias y asegurando la estabilidad del sistema.",
+        foto: "img/persona.jpg"
+      }
+    ];
+
+    // Generar tarjetas
+    integrantes.forEach((integrante) => {
+      const div = document.createElement("div");
+      div.className = "integrante-card";
+      div.innerHTML = `
+        <img src="${integrante.foto}" class="integrante-foto" alt="${integrante.nombre}">
+        <h3 class="integrante-nombre">${integrante.nombre}</h3>
+        <p class="integrante-rol">${integrante.rol}</p>
+      `;
+      div.querySelector(".integrante-foto").addEventListener("click", () => abrirModalIntegrante(integrante));
+      trackIntegrantes.appendChild(div);
+    });
+
+    let indiceActual = 0;
+
+    function obtenerVisibles() {
+      if (window.innerWidth <= 480) return 1;
+      if (window.innerWidth <= 768) return 2;
+      if (window.innerWidth <= 1024) return 3;
+      return 4;
+    }
+
+    function moverIntegrante(direccion) {
+      const visibles = obtenerVisibles();
+      const total = integrantes.length;
+      const ancho = trackIntegrantes.querySelector(".integrante-card").offsetWidth + 20;
+      const maxIndice = total - visibles;
+
+      indiceActual += direccion;
+      if (indiceActual < 0) indiceActual = 0;
+      if (indiceActual > maxIndice) indiceActual = maxIndice;
+
+      trackIntegrantes.style.transform = `translateX(${-indiceActual * ancho}px)`;
+    }
+
+    function abrirModalIntegrante(integrante) {
+      modalNombre.textContent = integrante.nombre;
+      modalDescripcion.textContent = integrante.descripcion;
+      modalFoto.src = integrante.foto;
+      modalIntegrante.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function cerrarModalIntegrante() {
+      modalIntegrante.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    modalIntegrante.addEventListener("click", (e) => {
+      if (e.target === modalIntegrante) cerrarModalIntegrante();
+    });
+
+    window.addEventListener("resize", () => {
+      indiceActual = 0;
+      trackIntegrantes.style.transform = "translateX(0)";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Servicios CLINAQ</title>
+</head>
+
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__bar">
+          <div class="logo">
+            <a href="#"><img src="assets/logo_aqcua.png" alt="logo" /></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="../nosotros.html">Nosotros</a></li>
+          <li><a href="../servicios.html">Servicios</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+         <div class="social-icons" role="region" aria-label="Redes sociales">
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99h-2.54v-2.89h2.54v-2.2c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.22.2 2.22.2v2.44h-1.25c-1.23 0-1.62.77-1.62 1.56v1.9h2.77l-.44 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.5 8.5 0 0 1-2.7 1.03 4.28 4.28 0 0 0-7.29 3.9A12.13 12.13 0 0 1 3.14 4.9 4.28 4.28 0 0 0 4.2 10a4.27 4.27 0 0 1-1.94-.54v.06a4.27 4.27 0 0 0 3.44 4.2 4.27 4.27 0 0 1-1.93.07 4.27 4.27 0 0 0 3.99 2.98A8.58 8.58 0 0 1 2 19.54 12.07 12.07 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.35 8.35 0 0 0 22.46 6z"/></svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.2 2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zm-4.2 2.1a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm0 1.5a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4z"/></svg>
+                </a>
+          </div>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <p>CLÍNICA AQCUA - CLINAQ</p>
+        <h1>CAMBIAMOS TU VIDA<br></h1>
+        <h2>Transforma tu salud con resultados seguros y probados. 
+        <br>Nuestro enfoque personalizado te ayuda a potencializar tu vitalidad.</h2>
+      </div>
+    </header>
+
+    <section class="section__container booking__container">
+      <form action="/" class="booking__form">
+        <div class="input__group">
+          <span><i class="ri-verified-badge-fill"></i></i></span>
+          <div>
+            <label for="check-in">249</label>
+            <input type="text" placeholder="Profesionales aliados" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-team-fill"></i></i></span>
+          <div>
+            <label for="check-out">+10</label>
+            <input type="text" placeholder="Años de Experiencia" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-user-fill"></i></i></span>
+          <div>
+            <label for="guest">1800</label>
+            <input type="text" placeholder="Clientes" />
+          </div>
+        </div>
+        
+      </form>
+    </section>
+
+    <section class="conocenos-container" aria-label="Sección Conócenos con carrusel e información">
+      <div class="conocenos-carousel" aria-roledescription="carousel" aria-label="Imágenes Conócenos" tabindex="0">
+        <div class="conocenos-carousel-slides">
+          <div class="conocenos-carousel-slide" role="group" aria-roledescription="slide" aria-label="Imagen 1 de 3">
+            <img src="assets/1x/aRecurso 2.png" alt="Paisaje natural verde con árboles y colinas bajo cielo despejado" />
+          </div>
+          <div class="conocenos-carousel-slide" role="group" aria-roledescription="slide" aria-label="Imagen 2 de 3">
+            <img src="assets/1x/aRecurso 2.png" alt="Vista de ciudad moderna con rascacielos y un cielo dramático al atardecer" />
+          </div>
+          <div class="conocenos-carousel-slide" role="group" aria-roledescription="slide" aria-label="Imagen 3 de 3">
+            <img src="assets/1x/aRecurso 2.png" alt="Imponente cadena de montañas rocosas con picos nevados y cielo azul claro" />
+          </div>
+        </div>
+
+        <button class="conocenos-carousel-arrow conocenos-carousel-arrow-left" aria-label="Slide anterior">
+          <span class="material-icons" aria-hidden="true">chevron_left</span>
+        </button>
+        <button class="conocenos-carousel-arrow conocenos-carousel-arrow-right" aria-label="Slide siguiente">
+          <span class="material-icons" aria-hidden="true">chevron_right</span>
+        </button>
+
+        <div class="conocenos-carousel-dots" role="tablist" aria-label="Navegación del carrusel">
+          <button class="conocenos-carousel-dot" aria-label="Ir a la imagen 1" role="tab" aria-selected="true" tabindex="0"></button>
+          <button class="conocenos-carousel-dot" aria-label="Ir a la imagen 2" role="tab" aria-selected="false" tabindex="-1"></button>
+          <button class="conocenos-carousel-dot" aria-label="Ir a la imagen 3" role="tab" aria-selected="false" tabindex="-1"></button>
+        </div>
+      </div>
+
+      <div class="conocenos-text-content">
+         <!-- <div class="conocenos-subtitle">Conoce más</div> -->
+        <h2 class="conocenos-title">Bienvenidos a CLINAQ, un espacio diseñado para cambiar y trasnformar vidas.</h2>
+        <p class="conocenos-description">Nuestro objetivo es trasnformar tu salud y bienestar en cada dimension: fisica,
+          mental, emocional, la calidad de tu sueño y como te sientes con tu apariencia. Bajo la visión y el liderazgo de
+          nuestra CEO, la Dra. Ivonne Betancourth, y nuestro equipo interdisciplinario, estudiamos tu caso en profundidad.
+          Así, diseñamos un camino personalizado que integra lo mejor de la medicina funcional, tradicional, holística y
+          regenerativa, garantizando resultados seguros, probados y respaldados por la cienca para potenciar tu vitalidad.
+          Estamos aquí para acompañarte en tu viaje hacie una vida plena.
+        </p>
+        <div class="conocenos-buttons">
+          <button class="conocenos-action-button" type="button">Conócenos</button>
+          <button class="conocenos-action-button" type="button">Experiencias</button>
+        </div>
+      </div>
+    </section> 
+    
+    <section class="service" id="service">
+      <div class="section__container service__container">
+        <div class="service__content">
+          <p class="section__subheader">SERVICIOS</p>
+          <h2 class="section__header">Servicios que transforman tu vida.</h2>
+          <ul class="service__list">
+            <li>
+              <span><i class="ri-stethoscope-line"></i></i></span>
+              Medicina general
+            </li>
+            <li>
+              <span><i class="ri-medicine-bottle-fill"></i></i></span>
+              Sueroterapia adultos y niños
+            </li>
+            <li>
+              <span><i class="ri-empathize-fill"></i></i></span>
+              Medicina especializada
+            </li>
+            <li>
+              <span><i class="ri-heart-pulse-fill"></i></i></span>
+              Quiropraxia
+            </li>
+            <li>
+              <span><i class="ri-nurse-fill"></i></i></span>
+              Complementarios
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section__container banner__container">
+      <h2 class="section__header">Modalidad de servicio:</h2> <br>
+      <div class="banner__content">
+        <div class="banner__card">
+          <h4>Virtual</h4>
+          <p>CLINAQ</p>
+        </div>
+        <div class="banner__card">
+          <h4>Domiciliaria</h4>
+          <p>CLINAQ</p>
+        </div>
+        <div class="banner__card">
+          <h4>Presencial</h4>
+          <p>CLINAQ</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lumm-section">
+        <div class="lumm-wrapper">
+            <div class="lumm-grid">
+                <!-- Columna izquierda con título y enlace -->
+                <div class="lumm-main-header">
+                    <div class="lumm-title-container">
+                        <h1 class="lumm-main-title">¿Por qué Clinaq?</h1>
+                    </div>
+                    <div class="lumm-more-info">
+                        <a href="#">Accede a más información aquí</a>
+                    </div>
+                </div>
+                
+                <!-- Grid de características 2x2 -->
+                <div class="lumm-features-grid">
+                    <!-- Fila superior -->
+                    <article class="lumm-feature-card">
+                        <div class="lumm-feature-icon"><img src="../servicios/assets/1.Bienestar0.png" alt=""></div>
+                        <p class="lumm-feature-description">
+                            Promovemos el bienestar integral basado
+                            en cinco pilares de salud, creando un plan
+                            completo que cubre los aspectos más
+                            importantes para mejorar la calidad de vida.
+                        </p>
+                    </article>
+                    
+                    <article class="lumm-feature-card">
+                        <div class="lumm-feature-icon"><img src="../servicios/assets/2. Equipo medico0.png" alt=""></div>
+                        <p class="lumm-feature-description">
+                            La experiencia de nuestro equipo médico y
+                            cientifico está respaldada por años de
+                            trabajo en la aplicación, implementación y
+                            multiplicación celular para tratamientos de
+                            terapias celulares.
+                        </p>
+                    </article>
+                    
+                    <!-- Fila inferior -->
+                    <article class="lumm-feature-card">
+                        <div class="lumm-feature-icon"><img src="../servicios/assets/3- Terapia0.png" alt=""></div>
+                        <p class="lumm-feature-description">
+                            Tenemos la capacidad de producir diversos
+                            tipos de terapia celular. Esto es llevado a
+                            cabo por profesionales expertosm lo que
+                            garantiza los más altos estándares de
+                            calidad en nuestros productos.
+                        </p>
+                    </article>
+                    
+                    <article class="lumm-feature-card">
+                        <div class="lumm-feature-icon"><img src="../servicios/assets/4- Tratamiento0.png" alt=""></div>
+                        <p class="lumm-feature-description">
+                            Nuestros tratamientos están diseñados
+                            para mejorar la calidad de vida mediante
+                            una personalización integral, basada en 
+                            estudios  y análisis que determinan el
+                            enfoque adecuado para cada paciente.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <header class="suero-container suero-header" role="banner">
+    <center>
+    <img src="https://cdn-icons-png.flaticon.com/512/2262/2262547.png" alt="Logo de Sueros" class="suero-logo" />
+    </center>
+    <h1 class="suero-title-main" id="main-title">Sueros Médicos</h1>
+    <h2 class="suero-subtitle-main" id="main-subtitle">Conozca los diferentes tipos y sus características</h2>
+    <p class="suero-text-main">Explora los diferentes sueros médicos y sus subtipos para entender mejor sus usos clínicos y aplicaciones.</p>
+  </header>
+
+  <div class="suero-buttons">
+    <button data-suerzo="sueroA" class="active" aria-pressed="true">Suero A</button>
+    <button data-suerzo="sueroB" aria-pressed="false">Suero B</button>
+    <button data-suerzo="sueroC" aria-pressed="false">Suero C</button>
+    <button data-suerzo="sueroD" aria-pressed="false">Suero D</button>
+    <button data-suerzo="sueroE" aria-pressed="false">Suero E</button>
+  </div>
+
+  <section aria-live="polite" aria-atomic="true" class="suero-info-display" role="region" tabindex="0" aria-label="Información detallada del suero seleccionado">
+
+    <img id="suero-image" src="" alt="Imagen del suero" class="suero-image" />
+
+    <div class="suero-info-center">
+      <h3 id="suero-title"></h3>
+      <p id="suero-description"></p>
+      <center>
+      <button class="suero-contact-btn" id="contact-button" aria-haspopup="dialog" aria-controls="suero-modal">Contactar</button>
+      </center>
+    </div>
+
+    <div class="suero-subtypes-buttons" id="subtype-buttons">
+      <!-- Dynamic subtype buttons inserted by JS -->
+    </div>
+
+  </section>
+
+  <!-- Modal for contact -->
+  <div class="suero-modal-overlay" id="suero-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+    <div class="suero-modal-content">
+      <h2 id="modal-title">Programe su cita</h2>
+      <div class="suero-modal-buttons">
+        <button id="btn-confirm">Confirmar</button>
+        <button id="btn-cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="nuestro-proceso">
+    <div class="proceso-header">
+        <h2 class="proceso-title">Nuestro Proceso</h2>
+        <p class="proceso-subtitle">
+            Descubre las etapas cuidadosamente diseñadas que garantizan el éxito de cada proyecto que emprendemos.
+        </p>
+    </div>
+
+    <div class="pasos-container">
+        <button class="paso-btn prev" aria-label="Paso anterior">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="pasos-track small-cards">
+            <!-- Paso 1 -->
+            <div class="paso-card">
+                <center>
+                <div class="paso-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                </center>
+                <p class="paso-etapa">Paso 1</p>
+                <h3 class="paso-nombre">Agendar una cita</h3>
+                <p class="paso-descripcion">
+                    Agenda fácilmente tu cita a través de nuestro sitio web, WhatsApp o línea telefónica.
+                </p>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="paso-card">
+                <center>
+                <div class="paso-icon">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                </center>
+                <p class="paso-etapa">Paso 2</p>
+                <h3 class="paso-nombre">Valoración médica</h3>
+                <p class="paso-descripcion">
+                    Nuestro equipo médico realizará una valoración integral para conocer tu estado de salud.
+                </p>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="paso-card">
+                <center>
+                <div class="paso-icon">
+                    <img src="../servicios/assets/Recurso 1gg.png" alt="">
+                </div>
+                </center>
+                <p class="paso-etapa">Paso 3</p>
+                <h3 class="paso-nombre">Implementación del tratamiento</h3>
+                <p class="paso-descripcion">
+                    Se diseña e inicia un plan de tratamiento personalizado según tus objetivos y condiciones.
+                </p>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="paso-card">
+              <center>
+                <div class="paso-icon">
+                    <i class="fas fa-vial"></i>
+                </div>
+                </center>
+                <p class="paso-etapa">Paso 4</p>
+                <h3 class="paso-nombre">Control médico</h3>
+                <p class="paso-descripcion">
+                    Realizamos controles periódicos para evaluar tu evolución y realizar ajustes si es necesario.
+                </p>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="paso-card">
+                <center>
+                <div class="paso-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                </center>
+                <p class="paso-etapa">Paso 5</p>
+                <h3 class="paso-nombre">Seguimiento y monitoreo</h3>
+                <p class="paso-descripcion">
+                    Te acompañamos con seguimiento y monitoreo para asegurar resultados sostenibles.
+                </p>
+            </div>
+        </div>
+
+        <button class="paso-btn next" aria-label="Paso siguiente">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="pasos-navegacion">
+            <div class="paso-marcador active" data-index="0"></div>
+            <div class="paso-marcador" data-index="1"></div>
+            <div class="paso-marcador" data-index="2"></div>
+        </div>
+    </div>
+</section>
+
+    <center>
+  <section class="contactanos-seccion" aria-labelledby="contactanos-title" aria-describedby="contactanos-desc" tabindex="0" id="contacto">
+    <div class="contactanos-texto">
+      <h2 id="contactanos-title">¿Planeas tu viaje de salud a clinaq?</h2>
+      <h3>Programamos tu viaje contigo</h3>
+      <p id="contactanos-desc">Si estás considerando realizarte un tratamiento en clinaq y 
+                               necesitas ayuda para organizar tu viaje y la logística, 
+                               ¡háznoslo saber!
+    </div>
+    <div class="contactanos-botones">
+      <a href="../contacto.html"><button type="button" aria-label="Contactanos">Contáctanos</button></a>
+      <button type="button" aria-label="Escríbenos">Escríbenos</button>
+    </div>
+    <div class="contactanos-gotas-container" aria-hidden="true">
+      <!-- Gotas se crearán dinámicamente -->
+    </div>
+  </section>
+  </center>
+   <!-- tarjetas presencia -->
+
+  <section class="presencia-section" aria-label="Galería de imágenes en sección presencia">
+    <h2>Tenemos presencia en</h2>
+    <div class="presencia-container">
+      <button id="btn-prev-presencia" class="presencia-btn" aria-label="Mostrar imágenes anteriores">&#8249;</button>
+      <div class="presencia-track" style="scroll-snap-type: x mandatory;">
+        <div class="presencia-item">
+          <img src="img/showImg/orlando.jpg" alt="Paisaje 1" />
+          <div class="card-titles">
+            <h3>Orlando</h3>
+            <p>Estados Unidos</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/york.jpg" alt="Paisaje 9" />
+          <div class="card-titles">
+            <h3>New York</h3>
+            <p>Estados Unidos</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/miami.jpg" alt="Paisaje 2" />
+          <div class="card-titles">
+            <h3>Miami</h3>
+            <p>Estados Unidos</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/madrid.jpg" alt="Paisaje 3" />
+          <div class="card-titles">
+            <h3>Madrid </h3>
+            <p>España</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/junin.jpg" alt="Paisaje 4" />
+          <div class="card-titles">
+            <h3>Junín</h3>
+            <p>Argentina</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/bogota.jpg" alt="Paisaje 5" />
+          <div class="card-titles">
+            <h3>Bogotá</h3>
+            <p>Colombia</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/ibague.jpg" alt="Paisaje 6" />
+          <div class="card-titles">
+            <h3>Ibagué</h3>
+            <p>Colombia</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/medellin.jpg" alt="Paisaje 7" />
+          <div class="card-titles">
+            <h3>Medellín</h3>
+            <p>Colombia</p>
+          </div>
+        </div>
+        <div class="presencia-item">
+          <img src="img/showImg/neiva.jpg" alt="Paisaje 8" />
+          <div class="card-titles">
+            <h3>Neiva</h3>
+            <p>Colombia</p>
+          </div>
+        </div>
+      </div>
+      <button id="btn-next-presencia" class="presencia-btn" aria-label="Mostrar imágenes siguientes">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- footer section starts here  -->
+    <footer>
+        <div class="footer-content">
+            <!-- Columna Logo y descripción -->
+            <div class="footer-column">
+                <div class="footer-brand">
+                    <img class="footer-logo" src="../img/Recurso_9.png" alt="Logo CLINAQ">
+                    <div class="brand-text">
+                        <h2>C L I N A Q</h2>
+                        <p>* S A S *</p>
+                    </div>
+                </div>
+                <h3 class="footer-t">Sobre CLINAQ</h3>
+                <p class="footer-about">
+                    Tu bienestar, nuestra misión. Transformamos tu salud con medicina general, 
+                    especializada, y terapias integrales como sueroterapia, quiropraxia, entre otros.
+                </p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-3v-3h3v-2c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 2v2h3.4l-.5 3h-2.9v7A10 10 0 0022 12z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm8.5 4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.499 6.203a2.82 2.82 0 00-1.987-1.99C19.669 4 12 4 12 4s-7.67 0-9.51.214a2.82 2.82 0 00-1.988 1.99A29.18 29.18 0 000 12a29.18 29.18 0 00.502 5.796 2.82 2.82 0 001.988 1.99c1.84.214 9.51.214 9.51.214s7.67 0 9.512-.214a2.82 2.82 0 001.987-1.99A29.18 29.18 0 0024 12a29.18 29.18 0 00-.501-5.797zM9.75 15.567V8.433L15.5 12l-5.75 3.567z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Columna Menú - CENTRADA -->
+            <div class="footer-column footer-menu">
+                <h3 class="footer-title">Menú</h3>
+                <ul class="footer-links">
+                    <li><a href="../pag_inicio.html">Inicio</a></li>
+                    <li><a href="../nosotros.html">Nosotros</a></li>
+                    <li><a href="#Servicios">Servicios</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <!-- Columna Contacto - ALINEADA DERECHA -->
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Contáctanos</h3>
+                <ul class="contact-info">
+                    <li>
+                        <span class="contact-text">
+                            <a href="mailto:notificaciones.clinaq@gmail.com">notificaciones.clinaq@gmail.com</a>
+                        </span>
+                        <span class="contact-icon"></span>
+                    </li>
+                    <li>
+                        <span class="contact-text">
+                            <a href="https://maps.google.com?q=Cra 6 . 7 -35 Purificación (Tolima) Al lado de la notaria unica" target="_blank">
+                                Cra 6 . 7 -35 Purificación (Tolima)<br>
+                                Al lado de la notaria unica
+                            </a>
+                        </span>
+                        <span class="contact-icon"></span>
+                    </li>
+                    <li>
+                        <span class="contact-text">
+                            <a href="tel:3052963163">305 296 3163</a>
+                        </span>
+                        <span class="contact-icon"></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 CLINAQ SAS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+  // Carrusel Conócenos
+  (function () {
+    const slidesContainer = document.querySelector('.conocenos-carousel-slides');
+    const slides = Array.from(document.querySelectorAll('.conocenos-carousel-slide'));
+    const prevBtn = document.querySelector('.conocenos-carousel-arrow-left');
+    const nextBtn = document.querySelector('.conocenos-carousel-arrow-right');
+    const dots = Array.from(document.querySelectorAll('.conocenos-carousel-dot'));
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentIndex = index;
+
+      const offset = -index * 100;
+      slidesContainer.style.transform = `translateX(${offset}%)`;
+
+      dots.forEach((dot, i) => {
+        const selected = i === index;
+        dot.classList.toggle('active', selected);
+        dot.setAttribute('aria-selected', selected);
+        dot.tabIndex = selected ? 0 : -1;
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => {
+      updateCarousel(currentIndex - 1);
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      updateCarousel(currentIndex + 1);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        updateCarousel(i);
+      });
+    });
+
+    const carousel = document.querySelector('.conocenos-carousel');
+    carousel?.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevBtn?.click();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextBtn?.click();
+      }
+    });
+
+    if (slidesContainer && slides.length > 0) {
+      updateCarousel(0);
+    }
+  })();
+
+  // Sistema de Sueros
+  const suerosData = {
+    sueroA: {
+      title: "Suero A - Clásico",
+      image: "./assets/sueros/SUEROS-SENSUS-05g.png",
+      subtypes: {
+        tipo1: { name: "Tipo 1", description: "Este es el Tipo 1 del Suero A. Usado comúnmente para hidratación básica y tratamiento de deshidratación leve.\n\nCaracterísticas:\n- Solución isotónica\n- Rápida absorción\n- Bajo riesgo de alergias" },
+        tipo2: { name: "Tipo 2", description: "Tipo 2 del Suero A es enriquecido con electrolitos para casos moderados.\n\nCaracterísticas:\n- Aporte de sodio y potasio\n- Mantiene el equilibrio electrolítico\n- Uso hospitalario estándar" },
+        tipo3: { name: "Tipo 3", description: "Tipo 3 del Suero A con glucosa añadida para energización rápida.\n\nCaracterísticas:\n- Fuente de energía\n- Ideal en casos de hipoglucemia\n- Uso pediátrico frecuente" },
+        tipo4: { name: "Tipo 4", description: "Tipo 4 del Suero A con aminoácidos para soporte nutricional.\n\nCaracterísticas:\n- Rico en aminoácidos esenciales\n- Apoyo en recuperación\n- Uso especializado" }
+      }
+    },
+    sueroB: {
+      title: "Suero B - Avanzado",
+      image: "./assets/sueros/SUEROS-SENSUS-05g.png",
+      subtypes: {
+        tipo1: { name: "Tipo 1", description: "Suero B Tipo 1, formulado para equilibrar electrolitos y fluidos en pacientes críticos.\n\nCaracterísticas:\n- Alta concentración de electrolitos\n- Uso en terapia intensiva\n- Requiere monitoreo constante" },
+        tipo2: { name: "Tipo 2", description: "Tipo 2 de Suero B es indicado para reanimación rápida post cirugía.\n\nCaracterísticas:\n- Solución hipertónica\n- Restablece volumen sanguíneo\n- Aplicación intravenosa rápida" },
+        tipo3: { name: "Tipo 3", description: "Tipo 3 contiene vitaminas y minerales para pacientes en recuperación.\n\nCaracterísticas:\n- Contiene vitaminas B y C\n- Refuerza sistema inmunológico\n- Uso post-operatorio" },
+        tipo4: { name: "Tipo 4", description: "Tipo 4 con agentes anticoagulantes para prevención de trombosis.\n\nCaracterísticas:\n- Prevención de coágulos\n- Uso hospitalario\n- Monitorización recomendada" }
+      }
+    },
+    sueroC: {
+      title: "Suero C - Especial",
+      image: "./assets/sueros/SUEROS-SENSUS-06f.png",
+      subtypes: {
+        tipo1: { name: "Tipo 1", description: "Suero C Tipo 1 está dirigido a pacientes con deficiencias específicas.\n\nCaracterísticas:\n- Enriquecido con electrolitos específicos\n- Uso ambulatorio\n- Control nutricional" },
+        tipo2: { name: "Tipo 2", description: "Tipo 2 de Suero C ayuda en la rehidratación con nutrientes esenciales.\n\nCaracterísticas:\n- Combinación personalizada\n- Soporte en tratamientos largos\n- Uso pediátrico" },
+        tipo3: { name: "Tipo 3", description: "Tipo 3 con aditivos antioxidantes para casos especiales.\n\nCaracterísticas:\n- Protege células\n- Reduce inflamación\n- Apoyo en terapias crónicas" },
+        tipo4: { name: "Tipo 4", description: "Tipo 4 con agentes inmunomoduladores para casos específicos.\n\nCaracterísticas:\n- Modula respuesta inmune\n- Uso en enfermedades autoinmunes\n- Aplicación supervisada" }
+      }
+    },
+    sueroD: {
+      title: "Suero D - Premium",
+      image: "./assets/sueros/SUEROS-SENSUS-06f.png",
+      subtypes: {
+        tipo1: { name: "Tipo 1", description: "Suero D Tipo 1 diseñado para tratamientos de alto rendimiento.\n\nCaracterísticas:\n- Formulación avanzada\n- Alta pureza\n- Uso en centros especializados" },
+        tipo2: { name: "Tipo 2", description: "Tipo 2 de Suero D con propiedades regenerativas.\n\nCaracterísticas:\n- Estimula recuperación celular\n- Uso en rehabilitación\n- Aplicación supervisada" },
+        tipo3: { name: "Tipo 3", description: "Tipo 3 contiene agentes antiinflamatorios para tratamientos prolongados.\n\nCaracterísticas:\n- Reduce dolor e inflamación\n- Soporte en terapias crónicas\n- Liberación controlada" },
+        tipo4: { name: "Tipo 4", description: "Tipo 4 con antioxidantes potentes para prevención celular.\n\nCaracterísticas:\n- Combate estrés oxidativo\n- Mejora función celular\n- Uso especializado" }
+      }
+    },
+    sueroE: {
+      title: "Suero E - Básico",
+      image: "./assets/sueros/SUEROS-SENSUS-06f.png",
+      subtypes: {
+        tipo1: { name: "Tipo 1", description: "Suero E Tipo 1 es un suero básico para cuidados generales.\n\nCaracterísticas:\n- Solución física estándar\n- Uso en primeros auxilios\n- Bajo costo" },
+        tipo2: { name: "Tipo 2", description: "Tipo 2 con electrolitos mínimos para pacientes pediátricos.\n\nCaracterísticas:\n- Suave para niños\n- Rehidratación lenta\n- Uso domiciliario" },
+        tipo3: { name: "Tipo 3", description: "Tipo 3 con propiedades calmantes para casos de intolerancia.\n\nCaracterísticas:\n- Reduce irritación\n- Compatible con medicamentos\n- Uso seguro" },
+        tipo4: { name: "Tipo 4", description: "Tipo 4 con soporte vitamínico para pacientes vulnerables.\n\nCaracterísticas:\n- Contiene multivitaminas\n- Refuerza defensas\n- Uso preventivo" }
+      }
+    }
+  };
+
+  let currentSuero = "sueroA";
+  let currentSubtype = "tipo1";
+
+  const sueroTitleEl = document.getElementById("suero-title");
+  const sueroDescriptionEl = document.getElementById("suero-description");
+  const sueroImageEl = document.getElementById("suero-image");
+  const contactButton = document.getElementById("contact-button");
+  const suerosButtons = document.querySelectorAll(".suero-buttons button");
+  const subtypeButtonsContainer = document.getElementById("subtype-buttons");
+  const modal = document.getElementById("suero-modal");
+  const btnConfirm = document.getElementById("btn-confirm");
+  const btnCancel = document.getElementById("btn-cancel");
+
+  function renderSubtypeButtons(subtypes, activeSubtypeKey) {
+    subtypeButtonsContainer.innerHTML = "";
+    const keys = ["tipo1", "tipo2", "tipo3", "tipo4"];
+    keys.forEach(key => {
+      const subtype = subtypes[key];
+      if (!subtype) return;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = subtype.name;
+      btn.setAttribute("role", "tab");
+      btn.setAttribute("aria-selected", key === activeSubtypeKey ? "true" : "false");
+      if (key === activeSubtypeKey) btn.classList.add("active");
+      btn.addEventListener("click", () => {
+        if (key !== currentSubtype) {
+          currentSubtype = key;
+          updateInfoDisplay();
+        }
+      });
+      subtypeButtonsContainer.appendChild(btn);
+    });
+  }
+
+  function updateInfoDisplay() {
+    const sueroData = suerosData[currentSuero];
+    const subtypeData = sueroData.subtypes[currentSubtype];
+
+    sueroTitleEl.textContent = `${sueroData.title} - ${subtypeData.name}`;
+    sueroDescriptionEl.textContent = subtypeData.description;
+    sueroImageEl.src = sueroData.image;
+    sueroImageEl.alt = `Imagen de ${sueroData.title}`;
+
+    suerosButtons.forEach(btn => {
+      const isActive = btn.dataset.suerzo === currentSuero;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+
+    renderSubtypeButtons(sueroData.subtypes, currentSubtype);
+  }
+
+  suerosButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const selectedSuero = btn.dataset.suerzo;
+      if (selectedSuero !== currentSuero) {
+        currentSuero = selectedSuero;
+        currentSubtype = "tipo1";
+        updateInfoDisplay();
+      }
+    });
+  });
+
+  contactButton.addEventListener("click", () => openModal());
+  btnCancel.addEventListener("click", () => closeModal());
+  btnConfirm.addEventListener("click", () => {
+    closeModal();
+    alert("Gracias por programar su cita. Nos pondremos en contacto pronto.");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      e.preventDefault();
+      closeModal();
+    }
+  });
+
+  function openModal() {
+    modal.classList.add("active");
+    modal.focus();
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+    contactButton.focus();
+  }
+
+  updateInfoDisplay();
+
+  // Carrusel de Pasos
+  document.addEventListener('DOMContentLoaded', function () {
+    const track = document.querySelector('.pasos-track');
+    const pasos = document.querySelectorAll('.paso-card');
+    const marcadores = document.querySelectorAll('.paso-marcador');
+    const nextBtn = document.querySelector('.paso-btn.next');
+    const prevBtn = document.querySelector('.paso-btn.prev');
+    const pasoStyle = window.getComputedStyle(pasos[0]);
+    const pasoMargin = parseFloat(pasoStyle.marginRight) * 2;
+
+    let currentIndex = 0;
+    let pasoWidth = pasos[0].offsetWidth + pasoMargin;
+    let pasosVisibles = 3;
+
+    function actualizarPasosVisibles() {
+      if (window.innerWidth <= 992 && window.innerWidth > 576) {
+        pasosVisibles = 2;
+      } else if (window.innerWidth <= 576) {
+        pasosVisibles = 1;
+      } else {
+        pasosVisibles = 3;
+      }
+
+      pasoWidth = pasos[0].offsetWidth + pasoMargin;
+
+      const numMarcadores = Math.ceil(pasos.length / pasosVisibles);
+      marcadores.forEach((marcador, i) => {
+        marcador.style.display = i < numMarcadores ? 'block' : 'none';
+      });
+    }
+
+    function moverAIndice(index) {
+      const maxIndex = pasos.length - pasosVisibles;
+      if (index < 0) index = maxIndex;
+      else if (index > maxIndex) index = 0;
+
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * pasoWidth}px)`;
+      actualizarMarcadores();
+    }
+
+    function actualizarMarcadores() {
+      marcadores.forEach(m => m.classList.remove('active'));
+      const marcadorActivo = Math.floor(currentIndex / pasosVisibles);
+      if (marcadores[marcadorActivo]) marcadores[marcadorActivo].classList.add('active');
+    }
+
+    function inicializarCarrusel() {
+      actualizarPasosVisibles();
+      moverAIndice(0);
+      marcadores.forEach((marcador, i) => {
+        marcador.addEventListener('click', () => moverAIndice(i * pasosVisibles));
+      });
+      nextBtn.addEventListener('click', () => moverAIndice(currentIndex + 1));
+      prevBtn.addEventListener('click', () => moverAIndice(currentIndex - 1));
+    }
+
+    inicializarCarrusel();
+
+    window.addEventListener('resize', () => {
+      let resizeTimer;
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        pasoWidth = pasos[0].offsetWidth + pasoMargin;
+        actualizarPasosVisibles();
+        moverAIndice(currentIndex);
+      }, 250);
+    });
+  });
+</script>
+<script>
+// Gotas sección Contacto y Carrusel Presencia
+window.addEventListener('load', () => {
+  // Gotas Contacto
+  const gotasContainer = document.querySelector('.contactanos-gotas-container');
+  const contactSection = document.querySelector('.contactanos-seccion');
+  const gotasConfig = [
+    { class: 'gota small' },
+    { class: 'gota medium' },
+    { class: 'gota large' },
+    { class: 'gota medium' },
+    { class: 'gota small' }
+  ];
+  const gotas = [];
+  gotasConfig.forEach(cfg => {
+    const div = document.createElement('div');
+    div.className = cfg.class;
+    gotasContainer.appendChild(div);
+    gotas.push({ el: div, x: 0, y: 0, destX: 0, destY: 0, speed: 0.1 + Math.random() * 0.15 });
+  });
+  let cursorX = contactSection.clientWidth / 2;
+  let cursorY = contactSection.clientHeight / 2;
+  contactSection.addEventListener('mousemove', (e) => {
+    const rect = contactSection.getBoundingClientRect();
+    cursorX = e.clientX - rect.left;
+    cursorY = e.clientY - rect.top;
+    gotas.forEach((gota, i) => {
+      const angle = (Math.PI * 2 / gotas.length) * i;
+      const offsetX = Math.cos(angle) * 50;
+      const offsetY = Math.sin(angle) * 50;
+      gota.destX = cursorX + offsetX;
+      gota.destY = cursorY + offsetY;
+    });
+  });
+  contactSection.addEventListener('mouseleave', () => {
+    gotas.forEach(gota => {
+      gota.destX = contactSection.clientWidth / 2;
+      gota.destY = contactSection.clientHeight / 2;
+    });
+  });
+  function animateGotas() {
+    gotas.forEach(gota => {
+      gota.x += (gota.destX - gota.x) * gota.speed;
+      gota.y += (gota.destY - gota.y) * gota.speed;
+      gota.el.style.transform = `translate(${gota.x - gota.el.offsetWidth / 2}px, ${gota.y - gota.el.offsetHeight / 2}px)`;
+    });
+    requestAnimationFrame(animateGotas);
+  }
+  gotas.forEach(gota => {
+    gota.x = contactSection.clientWidth / 2;
+    gota.y = contactSection.clientHeight / 2;
+    gota.destX = gota.x;
+    gota.destY = gota.y;
+  });
+  animateGotas();
+
+  // Carrusel Presencia
+  const presenciaTrack = document.querySelector('.presencia-track');
+  const presenciaItems = Array.from(presenciaTrack.children);
+  const btnPrevPresencia = document.getElementById('btn-prev-presencia');
+  const btnNextPresencia = document.getElementById('btn-next-presencia');
+  let currentIndex = 0;
+  let visibleItems = calculateVisibleItems();
+  function calculateVisibleItems() {
+    const width = window.innerWidth;
+    if (width < 600) return 1;
+    else if (width < 901) return 2;
+    else return 3;
+  }
+  function getItemWidth() {
+    const style = getComputedStyle(presenciaItems[0]);
+    const marginRight = parseInt(style.marginRight) || 0;
+    return presenciaItems[0].getBoundingClientRect().width + marginRight;
+  }
+  function moveToIndex(index) {
+    const maxIndex = presenciaItems.length - visibleItems;
+    if (index < 0) index = 0;
+    if (index > maxIndex) index = maxIndex;
+    currentIndex = index;
+    const distance = -currentIndex * getItemWidth();
+    presenciaTrack.style.transform = `translateX(${distance}px)`;
+    updateButtons();
+  }
+  function updateButtons() {
+    btnPrevPresencia.disabled = currentIndex === 0;
+    btnNextPresencia.disabled = currentIndex >= presenciaItems.length - visibleItems;
+  }
+  btnPrevPresencia.addEventListener('click', () => moveToIndex(currentIndex - 1));
+  btnNextPresencia.addEventListener('click', () => moveToIndex(currentIndex + 1));
+  window.addEventListener('resize', () => {
+    const newVisibleItems = calculateVisibleItems();
+    if (newVisibleItems !== visibleItems) {
+      visibleItems = newVisibleItems;
+      currentIndex = 0;
+      presenciaTrack.style.transition = 'none';
+      moveToIndex(currentIndex);
+      void presenciaTrack.offsetWidth;
+      presenciaTrack.style.transition = 'transform 0.4s ease-in-out';
+    } else {
+      moveToIndex(currentIndex);
+    }
+  });
+  moveToIndex(0);
+});
+
+// Carrusel Conócenos
+(function () {
+  const slidesContainer = document.querySelector('.conocenos-carousel-slides');
+  const slides = Array.from(document.querySelectorAll('.conocenos-carousel-slide'));
+  const prevBtn = document.querySelector('.conocenos-carousel-arrow-left');
+  const nextBtn = document.querySelector('.conocenos-carousel-arrow-right');
+  const dots = Array.from(document.querySelectorAll('.conocenos-carousel-dot'));
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function updateCarousel(index) {
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+    currentIndex = index;
+    slidesContainer.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach((dot, i) => {
+      const selected = i === index;
+      dot.classList.toggle('active', selected);
+      dot.setAttribute('aria-selected', selected);
+      dot.tabIndex = selected ? 0 : -1;
+    });
+  }
+
+  prevBtn?.addEventListener('click', () => updateCarousel(currentIndex - 1));
+  nextBtn?.addEventListener('click', () => updateCarousel(currentIndex + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => updateCarousel(i)));
+  document.querySelector('.conocenos-carousel')?.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') e.preventDefault(), prevBtn?.click();
+    else if (e.key === 'ArrowRight') e.preventDefault(), nextBtn?.click();
+  });
+
+  if (slidesContainer && slides.length > 0) updateCarousel(0);
+})();
+</script>
+
+
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
